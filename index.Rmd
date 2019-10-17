@@ -17,4 +17,4 @@ output:
 
 # add image
 
-- [](.image/name.jpeg)
+<!-- - [](.image/name.jpeg) -->
