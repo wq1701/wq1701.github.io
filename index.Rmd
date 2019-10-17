@@ -4,17 +4,18 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
 # This is Jeff's awesome website
+
+learn me [here](about.html)
 
 ![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
 
 # add links
 
-- use [google](https://www.google.com) to do **data science**
+use [google](https://www.google.com) to do **data science**
 
 # add image
 
-<!-- - [](.image/name.jpeg) -->
+[image](image/Unknown.jpg)
