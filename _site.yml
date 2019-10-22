@@ -13,4 +13,4 @@ navbar:
       href: http://github.com/<YOUR_GH_NAME>/
 output:
   html_document:
-    theme: solar
+    theme: cerulean
