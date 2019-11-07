@@ -23,4 +23,6 @@ navbar:
       href: https://sites.google.com/view/cumcdatasciencegroup/home
 output:
   html_document:
-    theme: spacelab
+    theme: flatly
+    include:
+      after_body: footer.html
