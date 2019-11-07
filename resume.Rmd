@@ -35,7 +35,7 @@ output:
 - Visited and conducted questionnaires with deans, attending doctors, pharmaceutical personnel and patients at five hospitals in Changzhou City, Jiangsu Province 
 - Inquired the basic medical facilities, drug reserve and usage (mainly about antibiotics), patient distribution, patients’ understanding of the national drug subsidy policy, and the salary status of pharmaceutical personnel, so as to provide data support for the realization of comprehensive pharmaceutical care in China. 
 
-# Working experience
+# WORKING EXPERIENCE
 
 ##### CPU: Class leader; 09/2017 - 06/2019
 
