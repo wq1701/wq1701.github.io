@@ -5,14 +5,15 @@ navbar:
   right:
     - text: "About"
       href: about.html
+    - text: "Resume"
+      href: "resume.html"
     - text: "Visualization"
       menu:
       - text: "Ploty"
         href: plotly.html
       - text: "Dashboard"
         href: dashboard.html
-    - text: "Resume"
-      href: "resume.html"
+
     - icon: fa-envelope fa-lg
       href: mailto:<wwqi4real@gmail.com>
     - icon: fa-github fa-lg
