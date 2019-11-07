@@ -1,0 +1,45 @@
+---
+title: "Plotly Examples"
+output: 
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+data("instacart")
+set.seed(123)
+```
+
+```{r warning=FALSE}
+most_aisle_orders = instacart %>%
+  count(aisle, sort = T)
+  
+most_aisle_orders %>% 
+  filter(n > 10000) %>% 
+  mutate(aisle = fct_reorder(aisle, -n)) %>% 
+  plot_ly(x = ~aisle, y = ~n, type = "bar", color = ~aisle)
+```
+
+```{r}
+instacart %>%
+  filter(aisle == "packaged vegetables fruits") %>%
+  group_by(product_name) %>%
+  mutate(mean_ord_hr = mean(order_hour_of_day)) %>%
+  select(product_name, mean_ord_hr) %>%
+  distinct() %>%
+  plot_ly(x = ~product_name, y = ~mean_ord_hr, type = "scatter", mode = "markers")
+```
+
+```{r}
+random_product = instacart %>% 
+  count(product_name, sort = T) %>% 
+  sample_n(50)
+inner_join(instacart, random_product, by = "product_name") %>% 
+  mutate(product_name = fct_reorder(product_name, days_since_prior_order)) %>%   plot_ly(x = ~product_name, y = ~days_since_prior_order, type = "box")
+```

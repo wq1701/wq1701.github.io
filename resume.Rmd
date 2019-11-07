@@ -1,0 +1,58 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# EDUCATION BACKGROUND 
+
+##### China Pharmaceutical University, 09/2015-06/2019 
+- Degree: Bachelor of Management, Business Management GPA: 3.34/4.0 
+- Core Curriculum: Management, Linear Algebra, Economics, Operational Research, Pharmaceutics 
+
+##### Columbia University, 09/2019-present 
+
+- Degree: Mater of Science in Biostatistics, Theory and Methods track 
+- Core Curriculum: Data science, Biostatistical Methods, Data Analysis, RCTs
+
+##### Coursera: 
+
+- Python for Everybody, delivered by the University of Michigan, 08/2018- 11/2018 
+
+- R-Programming, delivered by the Johns Hopkins University, 11/2018- 12/2018 
+
+# PROJECT EXPERIENCE 
+
+##### Team Leader; Interpretation of the New Normal Economic Situation, 03/2017-06/2017 Advised by Dr. Xi Xiaoyu 
+
+- Collected the GDP data, industrial structure, employment personnel, population data of China with python from World Bank Group, outlined main characteristics of the Economy by fulfilling exploratory data analysis. 
+- Adopted subdivision analysis and comparative analysis to predict the potential opportunities and changes brought by the new normal economy. 
+
+##### Member; Research on Pharmaceutical Care in Jiangsu Primary Medical Institutions, 06/2016-12/2016 Advised by Dr. Yao Wenbing 
+
+- Visited and conducted questionnaires with deans, attending doctors, pharmaceutical personnel and patients at five hospitals in Changzhou City, Jiangsu Province 
+- Inquired the basic medical facilities, drug reserve and usage (mainly about antibiotics), patient distribution, patients’ understanding of the national drug subsidy policy, and the salary status of pharmaceutical personnel, so as to provide data support for the realization of comprehensive pharmaceutical care in China. 
+
+# AWARDS 
+
+- The First Prize of the Seventh Securities Investment Preliminary Contest, held by School of Business at CPU, 06/2018 
+- Third-class Scholarship for Merited Students, offered by CPU, 03/2018 
+- The Honorable Title of Excellent Student in 2018, awarded by Nanjing Global Education Co., Ltd, 03/2018 
+- The Honorable Title of Excellent Outstanding Volunteer at Jiangsu Development Summit, offered by Jiangsu Students’ Federation, 05/2017 
+
+# ACTIVITIES
+
+- Attendee, 21st Public Health Education Initiative for Chinese Medical Students open course entitled ‘Medical Innovation in the Era of Digital Intelligence’, 06/2018 
+- Attendee, Global Health Course-China entitled ‘Global Disasters and Humanitarian Crisis’, 11/2018 
+
+# SKILLS
+
+## Programming and Softwares: 
+
+Visual Basic, Python, R, SQL; SPSS, Office, RStudio(.Rmd), Sublime Text
+
+## Skillsets: 
+
+Visualization, strategic and critical thinking, information searching, interpersonal skills, business.  

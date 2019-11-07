@@ -1,18 +1,18 @@
 ---
-title: "My awesome website"
+title: "Welcome!"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is the First Awesome Website
+# Welcome to my website
 
 learn me [here](about.html)
 
 ![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
 
-# add links
+# for more information, click **about**
 
 use [google](https://www.google.com) to do **data science**
 

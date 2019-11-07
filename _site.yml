@@ -5,13 +5,22 @@ navbar:
   right:
     - text: "About"
       href: about.html
-    - text: "plotly"
-      href: plotly_191022.html
-    
+    - text: "Visualization"
+      menu:
+      - text: "Ploty"
+        href: plotly.html
+      - text: "Dashboard"
+        href: dashboard.html
+    - text: "Resume"
+      href: "resume.html"
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<wwqi4real@gmail.com>
     - icon: fa-github fa-lg
-      href: http://github.com/<YOUR_GH_NAME>/
+      href: http://github.com/wwqi4realGitHub/
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/weiwei-qi-539677164/
+    - icon: fa-chart-bar fa-lg
+      href: https://sites.google.com/view/cumcdatasciencegroup/home
 output:
   html_document:
-    theme: cerulean
+    theme: spacelab
