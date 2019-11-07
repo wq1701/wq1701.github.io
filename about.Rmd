@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "About"
 output: 
   html_document:
     toc: true
@@ -7,6 +7,6 @@ output:
 ---
 
 
-### This website is used for personal purpose only. 
+#### This website is intended for personal use only. 
 
 **by Weiwei Qi, 2019**
