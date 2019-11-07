@@ -1,13 +1,14 @@
-name: "Yay internet!"
+name: "My personal website"
 output_dir: "."
 navbar:
   title: "Home"
-  right:
+  left:
     - text: "About"
       href: about.html
     - text: "Resume"
       href: resume.html
-    - text: "Visualization"
+  right:
+    - icon: fa-chart-bar fa-lg
       menu:
       - text: "Ploty"
         href: plotly.html
@@ -19,7 +20,7 @@ navbar:
       href: http://github.com/wwqi4realGitHub/
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/weiwei-qi-539677164/
-    - icon: fa-chart-bar fa-lg
+    - icon: fa-code fa-lg
       href: https://sites.google.com/view/cumcdatasciencegroup/home
 output:
   html_document:
