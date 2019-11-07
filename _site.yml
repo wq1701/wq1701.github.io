@@ -14,7 +14,7 @@ navbar:
       - text: "Dashboard"
         href: dashboard.html
     - icon: fa-envelope fa-lg
-      href: mailto:<wwqi4real@gmail.com>
+      href: mailto:wwqi4real@gmail.com
     - icon: fa-github fa-lg
       href: http://github.com/wwqi4realGitHub/
     - icon: fa-linkedin fa-lg
