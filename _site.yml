@@ -27,3 +27,4 @@ output:
     theme: flatly
     include:
       after_body: footer.html
+    css: styles.css
