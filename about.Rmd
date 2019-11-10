@@ -1,12 +1,8 @@
 ---
 title: "About"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
 ---
 
 
-#### This website is intended for personal use only. 
+#### This website is built with R and RStudio; intended for personal use only. 
 
 **by Weiwei Qi, 2019**

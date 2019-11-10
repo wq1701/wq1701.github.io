@@ -1,16 +1,14 @@
 ---
 title: "Weiwei Qi"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
 ---
+
+
 
 ### Welcome to my website
 
 ### About
 
-I received my Bachelor's degree in Businese Management(Pharmaceutical track) from [China Pharmaceutical University](https://en.cpu.edu.cn/) in 2019. Now I am a MS student in Biostatistics(Theory and Methods) at [Columbia University](https://www.mailman.columbia.edu/become-student/departments/biostatistics). Currently I am a member of CUMC Data Science Club since 10/2019. 
+I got my Bachelor's degree in Businese Management(Pharmaceutical track) from [China Pharmaceutical University](https://en.cpu.edu.cn/) in 2019. Now I am a MS student in Biostatistics(Theory and Methods) at [Columbia University](https://www.mailman.columbia.edu/become-student/departments/biostatistics). Currently I am a member of CUMC Data Science Club since 10/2019. 
 
 ### Contact Information
 
