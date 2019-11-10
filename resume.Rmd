@@ -37,12 +37,12 @@ output:
 
 # WORKING EXPERIENCE
 
-##### CPU: Class leader; 09/2017 - 06/2019
+##### Class leader; China Pharmaceutical University, 09/2017 - 06/2019
 
 - Responsible for hosting class meetings; 
 - Contact with teachers and arrange office hour; 
 
-##### CUMC Data Science Club: Finance Officer; 10/2019 - present
+##### Finance Officer; CUMC Data Science Club, 10/2019 - present
 
 - Responsible for overseeing the finances and budget of the club; 
 - Other delegated work; 
