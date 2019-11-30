@@ -14,7 +14,7 @@ navbar:
         href: plotly.html
       - text: "Dashboard"
         href: dashboard.html
-      - text: Shiny
+      - text: "Shiny"
         href: https://wq4rstudio.shinyapps.io/shiny_template/
     - icon: fa-envelope fa-lg
       href: mailto:wwqi4real@gmail.com

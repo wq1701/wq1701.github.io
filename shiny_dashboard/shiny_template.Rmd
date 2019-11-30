@@ -1,8 +1,9 @@
 ---
-title: "Don't do drugs! - Map of drug related death"
+title: "Don't do drugs! - Map of drug related death in CT"
 author: "Weiwei Qi, wq2151"
 output:
   flexdashboard::flex_dashboard:
+    theme: flatly
     orientation: columns
     vertical_layout: fill
 runtime: shiny
@@ -53,4 +54,224 @@ new_drug_df = new_drug_df %>%
 # nlevels(as.factor(geo_df$inj_geo_tidy))
 # # some different location may have same count, so their levels are different
 # nlevels(as.factor(geo_df$inj_geo_count))
+```
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+```{r}
+shows = c("All", "Strata")
+
+selectInput(
+  "show_choice", 
+  label = h3("Select the map"), 
+  choices = shows, selected = "All")
+
+# for chart A
+# races = new_drug_df %>% pull(race) %>% as.factor() %>% levels()
+# races = append(races, "All", after = 0)
+races = c("ALL", unique(sort(new_drug_df$race)))
+
+selectInput(
+  # give the input a `name`: "boro_choice" in case you need to access it later
+  # in html doc, it's actually `class_id`
+  "race_choice", 
+  label = h3("Select race"),
+  choices = races, selected = "White")
+
+# drug_numbers = new_drug_df %>% pull(drug_number) %>% as.factor() %>% levels()
+# drug_numbers = append(drug_numbers, "All", after = 0)
+drug_numbers = c("ALL", unique(new_drug_df$drug_number))
+
+selectInput(
+  "drug_number_choice", 
+  label = h3("Select the number of drug used"),
+  choices = drug_numbers, selected = "3")
+
+min_year = new_drug_df %>% pull(year) %>% min(na.rm = T) %>% as.numeric()
+max_year = new_drug_df %>% pull(year) %>% max(na.rm = T) %>% as.numeric()
+
+sliderInput(
+  "year_range", 
+  label = h3("Choose year range"), 
+  min = min_year, max = max_year, value = c(2012, 2018))
+
+# genders = new_drug_df %>% pull(sex) %>% as.factor() %>% levels()
+# genders = append(genders, "All", after = 0)
+genders = c("ALL", unique(sort(new_drug_df$sex)))
+
+radioButtons(
+  "gender_choice", 
+  label = h3("Choose gender"),
+  choices = genders, selected = "Male")
+```
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### Geolocation of injury city
+
+```{r}
+######################### reactive df ##########################
+sub_drug_df = reactive({
+  if (input$race_choice == "All") {
+    new_drug_df %>% filter(drug_number == input$drug_number_choice, 
+                           year %in% input$year_range[1]:input$year_range[2],
+                           sex == input$gender_choice)
+  } else {new_drug_df %>% filter(race == input$race_choice,
+                           drug_number == input$drug_number_choice, 
+                           year %in% input$year_range[1]:input$year_range[2],
+                           sex == input$gender_choice)
+  }
+  
+  if (input$drug_number_choice == "All") {
+    new_drug_df %>% filter(race == input$race_choice,
+                           year %in% input$year_range[1]:input$year_range[2],
+                           sex == input$gender_choice)
+  } else {new_drug_df %>% filter(race == input$race_choice,
+                           drug_number == input$drug_number_choice, 
+                           year %in% input$year_range[1]:input$year_range[2],
+                           sex == input$gender_choice)
+  }
+  
+  if (input$gender_choice == "All") {
+    new_drug_df %>% filter(race == input$race_choice,
+                           drug_number == input$drug_number_choice, 
+                           year %in% input$year_range[1]:input$year_range[2])
+  } else {new_drug_df %>% filter(race == input$race_choice,
+                                 drug_number == input$drug_number_choice,
+                                 year %in% input$year_range[1]:input$year_range[2],
+                                 sex == input$gender_choice)
+  }
+  
+})
+
+map_choice = reactive({
+  if (input$show_choice == "All") {
+    new_drug_df
+  } else {new_drug_df %>% filter(race == input$race_choice,
+                                 drug_number == input$drug_number_choice, 
+                                 year %in% input$year_range[1]:input$year_range[2],
+                                 sex == input$gender_choice)
+  }
+})
+
+######################### plot ##########################
+pal <- colorNumeric(palette = "plasma", domain = new_drug_df$drug_number)
+
+renderLeaflet({
+    # Use leaflet() here, and only include aspects of the map that
+    # won't need to change dynamically (at least, not unless the
+    # entire map is being torn down and recreated).
+    map_choice() %>%
+    # filter(
+    #   race == input$race_choice,
+    #   drug_number == input$drug_number_choice, 
+    #   year %in% input$year_range[1]:input$year_range[2],
+    #   sex == input$gender_choice
+    # ) %>%
+    leaflet() %>% addTiles() %>%
+    addProviderTiles(providers$CartoDB.Positron) %>%
+    # addCircles(lat = ~inj_lat, lng = ~inj_long, radius = 5, color = "red") %>%
+    addCircleMarkers(
+      lat = ~inj_lat, lng = ~inj_long,
+      radius = ~sqrt(inj_geo_count/2),
+      color = ~pal(drug_number),
+      popup = paste(new_drug_df$drug_names)
+    ) %>% 
+    addLegend("bottomright", 
+              title = "Number of Drugs", 
+              values = ~drug_number, 
+              pal = pal, 
+              labFormat = labelFormat(), 
+              opacity = 1)
+  })
+
+
+## below is for testing aesthetics part of the plot without runing the whole document
+## again
+
+# pal <- colorNumeric(palette = "plasma", domain = new_drug_df$drug_number)
+
+# leaflet(data = new_drug_df) %>% addTiles() %>%
+#     addProviderTiles(providers$CartoDB.Positron) %>%
+#     # addCircles(lat = ~inj_lat, lng = ~inj_long, radius = 5, color = "red") %>%
+#     addCircleMarkers(
+#       lat = ~inj_lat, lng = ~inj_long,
+#       radius = ~sqrt(inj_geo_count/2),
+#       color = ~pal(drug_number),
+#       popup = paste(new_drug_df$drug_names),
+#       opacity = 100
+#     ) %>%
+#     addLegend("bottomright",
+#               title = "Number of Drugs",
+#               values = ~drug_number,
+#               pal = pal,
+#               labFormat = labelFormat(),
+#               opacity = 1)
+      
+      
+## use this cmd in console to deply the rmd interactive file with shinyapps.io
+# rsconnect::deployDoc('./shiny_template/shiny_template.rmd')
+```
+
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### Age distribution on various factors
+
+```{r}
+new_drug_df %>% 
+  ggplot() +
+  geom_bar(aes(x = age))
+
+renderPlotly({
+  new_drug_df %>% 
+    filter(
+      race == input$race_choice,
+      drug_number == input$drug_number_choice, 
+      year %in% input$year_range[1]:input$year_range[2],
+      sex == input$gender_choice
+    ) %>% 
+    # mutate(text_label = str_c("Year: ", year, '\nDrug(s): ', drug_names)) %>% 
+    ggplot() +
+    geom_bar(aes(x = age))
+})
+```
+
+### Chart C
+
+```{r}
+drug_df = read_csv("./data/Accidental_Drug_Related_Deaths_2012-2018.csv") %>% 
+  janitor::clean_names() %>% 
+  mutate(date = as.character(date)) %>% 
+  separate(date, into = c("month", "day", "year"), sep = "/") %>% 
+  mutate(
+    year = unlist(strsplit(year, " "))[1], 
+    year = ifelse(is.na(month), NA, as.numeric(year)),
+    day = as.numeric(day),
+    month = factor(month.name[as.numeric(month)], levels = month.name),
+    race = as.factor(race),
+    sex = as.factor(sex)
+  ) %>% 
+  separate(injury_city_geo, into = c("injury_city", "injury_geo"), sep = "CT") %>% 
+  separate(injury_geo, into = c("inj_latitude", "inj_longitude"), sep = ",") %>% 
+  mutate(
+    inj_latitude = as.numeric(str_remove(inj_latitude, "\\(")), 
+    inj_longitude = as.numeric(str_remove(inj_longitude, "\\)")), 
+    injury_city = str_remove(injury_city, "\\,")
+  ) %>% 
+  select(-date_type) %>% 
+  pivot_longer(heroin:any_opioid, names_to = "drug_name", values_to = "drug_use") %>% 
+  drop_na(drug_use)
+
+renderPlotly({
+  drug_df %>%
+  filter(
+    race == input$race_choice, 
+    sex == input$gender_choice) %>% 
+  count(drug_name) %>% 
+  mutate(drug_name = fct_reorder(drug_name, n)) %>% 
+  plot_ly(x = ~drug_name, y = ~n, color = ~drug_name, type = "bar")
+})
 ```
