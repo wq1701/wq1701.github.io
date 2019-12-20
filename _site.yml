@@ -7,11 +7,11 @@ navbar:
       href: about.html
     - text: "Resume"
       href: resume.html
+    - text: "Project"
+      href: project.html
   right:
     - icon: fa-chart-bar fa-lg
       menu:
-      - text: "Ploty"
-        href: plotly.html
       - text: "Dashboard"
         href: dashboard.html
       - text: "Shiny"

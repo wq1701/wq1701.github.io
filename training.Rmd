@@ -1,0 +1,9 @@
+---
+title: "Training"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+I spent 4 years in business school, where I was trained to think critically and utilize quantitative skills in real world problems. 

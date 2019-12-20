@@ -221,10 +221,6 @@ Column {data-width=450}
 ### Age distribution on various factors
 
 ```{r}
-new_drug_df %>% 
-  ggplot() +
-  geom_bar(aes(x = age))
-
 renderPlotly({
   new_drug_df %>% 
     filter(
