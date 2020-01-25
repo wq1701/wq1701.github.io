@@ -23,6 +23,9 @@ output:
 
 - Course Data Science
 
+- Collected drug abuse data in the state of Connecticut; Use R to clean, pivot, and transform data as desired;
+- Visualize the geo data of drug abuse along with reference information on the interactive state map.
+
 ##### Interpretation of the New Normal Economic Situation, Mar 2017 - Jun 2017
 
 - Course Statistics Principles
@@ -41,6 +44,11 @@ output:
 
 - Responsible for overseeing the finances and budget of the club; 
 - Other delegated work; 
+
+##### Assistant to CEO; CUG Golden Shield Environmental Technology, Feb 2019 - Jun 2019
+
+- Assists the CEO with daily administrative duties; Translate necessary documents; Utilize Excel skills;
+- Search for industry information from various sources and drafts report.
 
 ##### Student Assistant; China Pharmaceutical University, Sept 2017 - Jun 2019
 
