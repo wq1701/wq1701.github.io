@@ -7,23 +7,21 @@ navbar:
       href: about.html
     - text: "Resume"
       href: resume.html
-    - text: "Project"
-      href: project.html
   right:
     - icon: fa-chart-bar fa-lg
       menu:
       - text: "Dashboard"
         href: dashboard.html
-      - text: "Shiny"
+      - text: "A Shiny Project: CT Drug Abuse Map"
         href: https://wq4rstudio.shinyapps.io/shiny_template/
+    - text: "Club"
+      href: https://sites.google.com/view/cumcdatasciencegroup/home
     - icon: fa-envelope fa-lg
       href: mailto:wq2151@columbia.edu
     - icon: fa-github fa-lg
       href: http://github.com/wwqi4realGitHub/
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/weiwei-qi-539677164/
-    - icon: fa-code fa-lg
-      href: https://sites.google.com/view/cumcdatasciencegroup/home
 output:
   html_document:
     theme: flatly

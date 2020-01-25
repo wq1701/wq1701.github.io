@@ -8,7 +8,7 @@ title: "Weiwei Qi"
 
 ### About
 
-I completed my undergraduate study in Businese Management(Pharmaceutical track) at [China Pharmaceutical University](https://en.cpu.edu.cn/) in 2019. Now I am a MS student in Biostatistics(Theory and Methods track) at [Columbia University](https://www.mailman.columbia.edu/become-student/departments/biostatistics). Currently I am a member of CUMC Data Science Club since 10/2019. I am interested in data science and programming in R and python. 
+I completed my undergraduate study in Businese Management(Pharmaceutical track) at [China Pharmaceutical University](https://en.cpu.edu.cn/) in 2019. Now I am a MS student in Biostatistics(Theory and Methods track) at [Columbia University](https://www.mailman.columbia.edu/become-student/departments/biostatistics). Currently I am a member of CUMC Data Science Club since 10/2019. I am interested in data science and programming in R and python. I want to further develop my career as a consultant or data analyst in the future. I am good at information searching and find useful information that I need to draw the concrete conclusion. 
 
 ### Contact Information
 
