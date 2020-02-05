@@ -1,0 +1,14 @@
+---
+title: "Recent updates"
+output: html_document
+---
+
+# Spring 2020
+
+### This semester's course: 
+BMEN4460 - Deep Learning in Biomedical Engineering (Python, Jupyter lab, Google Cloud Platform)
+P8106 - Data Science II (Machine Learning in R)
+P8131 - Biostatistical Methods
+P8109 - Statistical Inference
+
+In addition to the course listed above, I am also preparing for the CFA level 1 exam and SAS certification. 

@@ -9,6 +9,8 @@ navbar:
       href: resume.html
     - text: "CV"
       href: CV.pdf
+    - text: "Recent"
+      href: recent.html
   right:
     - icon: fa-chart-bar fa-lg
       menu:
