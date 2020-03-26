@@ -7,8 +7,8 @@ navbar:
       href: about.html
     - text: "Resume"
       href: resume.html
-    - text: "CV"
-      href: CV.pdf
+    - text: "CV pdf"
+      href: CV2.pdf
     - text: "Recent"
       href: recent.html
   right:
