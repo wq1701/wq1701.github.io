@@ -8,7 +8,7 @@ navbar:
     - text: "Resume"
       href: resume.html
     - text: "CV pdf"
-      href: CV2.pdf
+      href: CV3.pdf
     - text: "Recent"
       href: recent.html
   right:
@@ -21,9 +21,9 @@ navbar:
     - text: "Club"
       href: https://sites.google.com/view/cumcdatasciencegroup/home
     - icon: fa-envelope fa-lg
-      href: mailto:wq2151@columbia.edu
+      href: mailto:wq2151@cumc.columbia.edu
     - icon: fa-github fa-lg
-      href: http://github.com/wwqi4realGitHub/
+      href: http://github.com/wq1701/
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/weiwei-qi-539677164/
 output:
