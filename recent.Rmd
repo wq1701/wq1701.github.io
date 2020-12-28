@@ -3,15 +3,36 @@ title: "Recent updates"
 output: html_document
 ---
 
+# Fall 2020
+
+### Course
+
+COMS6998 - Machine Learning w/ Probabilistic Programming
+
+P8116 - Design of Medical Experiment
+
+P8157 - Longitudinal Data Analysis
+
+QMSS5067 - Natural Language Processing for Social Science
+
 # Spring 2020
 
-### This semester's course: 
+### Course
+
 BMEN4460 - Deep Learning in Biomedical Engineering (Python, Jupyter lab, Google Cloud Platform)
 
 P8106 - Data Science II (Machine Learning in R)
 
-P8131 - Biostatistical Methods
+P8131 - Biostatistical Methods II
 
 P8109 - Statistical Inference
 
-In addition to the course listed above, I am also preparing for the CFA level 1 exam and SAS certification. 
+# Fall 2019
+
+P8104 - probability
+
+P8105 - Data Science I
+
+P8130 - Biostatistical Methods I
+
+P6400 - principles of Epidemiology

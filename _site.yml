@@ -5,8 +5,6 @@ navbar:
   left:
     - text: "About"
       href: about.html
-    - text: "Resume"
-      href: resume.html
     - text: "CV pdf"
       href: CV3.pdf
     - text: "Recent"
@@ -14,15 +12,13 @@ navbar:
   right:
     - icon: fa-chart-bar fa-lg
       menu:
-      - text: "R Dashboard showcase"
-        href: dashboard.html
       - text: "A Shiny Project: CT Drug Abuse Map"
         href: https://wq4rstudio.shinyapps.io/shiny_template/
       - text: "Prob Matrix Factorization"
         href: https://github.com/wq1701/mlpp_final
       - text: "Natural Lang Proc - Medical Transcript"
         href: https://github.com/armoses/Columbia_NLP_EHR_Project
-    - text: "CUIMC Data Science Club"
+    - text: "DS Club"
       href: https://sites.google.com/view/cumcdatasciencegroup/home
     - icon: fa-envelope fa-lg
       href: mailto:wq2151@cumc.columbia.edu
@@ -30,6 +26,8 @@ navbar:
       href: http://github.com/wq1701/
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/weiwei-qi-539677164/
+    - icon: fa-twitch
+      href: https://www.twitch.tv/weilikeit
 output:
   html_document:
     theme: flatly
