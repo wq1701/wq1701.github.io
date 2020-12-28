@@ -2,9 +2,9 @@
 title: "Weiwei Qi"
 ---
 
-Master of Science in Biostatistics Candidate (Expected May 2021)
+Master of Science in Biostatistics (Expected May 2021) - Columbia University Mailman School of Public Health
 
-Columbia University Mailman School of Public Health
+![](./image/front.jpg){width=20%}
 
 <center> 
 ## Hi! You just find something Awesome!
@@ -12,7 +12,7 @@ Columbia University Mailman School of Public Health
 
 ### About
 
-I completed my undergraduate study in Businese Management(Pharmaceutical track) at [China Pharmaceutical University](https://en.cpu.edu.cn/) in 2019. Now I am a MS student in Biostatistics(Theory and Methods track) at [Columbia University](https://www.mailman.columbia.edu/become-student/departments/biostatistics). Currently I am a member of CUIMC Data Science Club since 10/2019. I am interested in data science and programming in R and python. I want to further develop my career as a consultant (Healthcare related) or data analyst in the future. I am good at information searching and find useful information that I need to draw the concrete conclusion. 
+I completed my undergraduate study in Businese Management(Pharmaceutical track) at [China Pharmaceutical University](https://en.cpu.edu.cn/) in 2019. Now I am a MS student in Biostatistics(Theory and Methods track) at [Columbia University](https://www.mailman.columbia.edu/become-student/departments/biostatistics). I am interested in data science and programming in R and python. I love playing with codes and use what I know for some goofy funny stuff. 
 
 This website has links to previous projects in the **navbar** above. 
 
@@ -24,6 +24,6 @@ New York, New York 10032
 
 Email: [wq2151@columbia.edu](mailto:wq2151@columbia.edu)
 
-Phone: (+1)646-683-6801(US); (+86)159-5107-0153(China)
+Phone: (+1)646-683-6801 (US) ; (+86) 159-5107-0153 (China)
 
 
