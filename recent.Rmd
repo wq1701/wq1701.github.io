@@ -7,9 +7,9 @@ output: html_document
 
 ### Course
 
-COMS6998 - Machine Learning w/ Probabilistic Programming
+COMS6998 - Machine Learning w/ Probabilistic Programming [link](https://www.proditus.com/mlpp2020)
 
-P8116 - Design of Medical Experiment
+P8116 - Design of Medical Experiment 
 
 P8157 - Longitudinal Data Analysis
 
@@ -19,7 +19,7 @@ QMSS5067 - Natural Language Processing for Social Science
 
 ### Course
 
-BMEN4460 - Deep Learning in Biomedical Engineering (Python, Jupyter lab, Google Cloud Platform)
+BMEN4460 - Deep Learning in Biomedical Engineering [link](https://github.com/RnR-2018)
 
 P8106 - Data Science II (Machine Learning in R)
 
@@ -29,9 +29,9 @@ P8109 - Statistical Inference
 
 # Fall 2019
 
-P8104 - probability
+P8104 - Probability
 
-P8105 - Data Science I
+P8105 - Data Science I [link](https://p8105.com/)
 
 P8130 - Biostatistical Methods I
 
