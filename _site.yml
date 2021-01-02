@@ -5,8 +5,12 @@ navbar:
   left:
     - text: "About"
       href: about.html
-    - text: "CV pdf"
-      href: CV3.pdf
+    - text: "CV"
+      menu:
+      - text: "ENG"
+        href: CV3.pdf
+      - text: "简体中文"
+        href: CV3.pdf
     - text: "Recent"
       href: recent.html
   right:

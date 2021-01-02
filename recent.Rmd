@@ -1,5 +1,5 @@
 ---
-title: "Recent updates"
+title: "Columbia updates"
 output: html_document
 ---
 
@@ -7,32 +7,48 @@ output: html_document
 
 ### Course
 
-COMS6998 - Machine Learning w/ Probabilistic Programming [link](https://www.proditus.com/mlpp2020)
+- COMS6998 - Machine Learning w/ Probabilistic Programming ([details](https://www.proditus.com/mlpp2020))
 
-P8116 - Design of Medical Experiment 
+- P8116 - Design of Medical Experiment 
 
-P8157 - Longitudinal Data Analysis
+- P8157 - Longitudinal Data Analysis
 
-QMSS5067 - Natural Language Processing for Social Science
+- QMSS5067 - Natural Language Processing for Social Science
+
+### Work
+
+- Research Technician/Assistant @ [Research Foundation For Mental Hygiene](https://rfmh.nyspi.org/)
+
+# Summer 2020
+
+### Summer intern
+
+- Research Technician @ [Research Foundation For Mental Hygiene](https://rfmh.nyspi.org/)
 
 # Spring 2020
 
 ### Course
 
-BMEN4460 - Deep Learning in Biomedical Engineering [link](https://github.com/RnR-2018)
+- BMEN4460 - Deep Learning in Biomedical Engineering ([details](https://github.com/RnR-2018))
 
-P8106 - Data Science II (Machine Learning in R)
+- P8106 - Data Science II (Machine Learning in R)
 
-P8131 - Biostatistical Methods II
+- P8131 - Biostatistical Methods II
 
-P8109 - Statistical Inference
+- P8109 - Statistical Inference
+
+### Volunteer
+
+- R developer @ [U.S.-China Health Summit](https://www.uschinahealthsummit.org/)
 
 # Fall 2019
 
-P8104 - Probability
+### Course
 
-P8105 - Data Science I [link](https://p8105.com/)
+- P8104 - Probability
 
-P8130 - Biostatistical Methods I
+- P8105 - Data Science I ([details](https://p8105.com/))
 
-P6400 - principles of Epidemiology
+- P8130 - Biostatistical Methods I
+
+- P6400 - principles of Epidemiology
