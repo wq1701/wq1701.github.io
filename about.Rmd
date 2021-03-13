@@ -6,6 +6,6 @@ I spent 4 years in business school at China Pharmaceutical University, where I w
 
 Now I am pursuing my master's degree in Biostatistics at Columbia University. I am interested in machine learning techniques and coding in solving real-world problems. More importantly, I believe in the power of real-world application and interpretation. My CV can be found above. 
 
-**This website is built with R and RStudio; intended for personal use only. **
+**This website is built with R and RStudio; intended for personal usage only. **
 
 **by Weiwei Qi, 2019**

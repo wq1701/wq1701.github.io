@@ -17,13 +17,13 @@ output: html_document
 
 ### Work
 
-- Research Technician/Assistant @ [Research Foundation For Mental Hygiene](https://rfmh.nyspi.org/)
+- Research Data Analyst @ [LeeLab](https://leelab.netlify.app/about/) under [Research Foundation For Mental Hygiene](https://rfmh.nyspi.org/) & [NYSPI](https://nyspi.org/)
 
 # Summer 2020
 
 ### Summer intern
 
-- Research Technician @ [Research Foundation For Mental Hygiene](https://rfmh.nyspi.org/)
+- Research Technician @ [Research Foundation For Mental Hygiene](https://rfmh.nyspi.org/) & [NYSPI](https://nyspi.org/)
 
 # Spring 2020
 
