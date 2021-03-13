@@ -1,5 +1,10 @@
 # Personal website
 
-I build this website purely by R/R Markdown/R studio. 
+I build this website purely with R/R Markdown/R studio. 
 
-It will update irregularly. 
+The website is currently deployed at https://wq1701.github.io/ 
+
+Previous domain https://weiweiq.com/ is NO longer is use since late 2020. 
+
+I will update this website irregularly. Have FUN there. 
+
