@@ -1,0 +1,18 @@
+---
+title: "A R Shiny Visualization"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The R Shiny cloud deloyment is too slow sometimes so I put some screenshots below. You could also access the original page by going to https://wq4rstudio.shinyapps.io/shiny_template/. The map is interactive with multiple toolboxes to visualize different tranche of data. 
+
+
+
+![](./image/shiny_ss.png){}
+
+![](./image/shiny_ss1.png){}
+
+![](./image/shiny_ss2.png){}

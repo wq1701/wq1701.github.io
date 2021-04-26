@@ -2,7 +2,9 @@
 title: "Weiwei Qi"
 ---
 
-Master of Science in Biostatistics (Expected May 2021) - Columbia University Mailman School of Public Health
+Master of Science in Biostatistics (2019-2021) - Columbia University Mailman School of Public Health
+
+Bachelor of Business Management (2015-2019) - China Pharmaceutial University
 
 ![](./image/front.jpg){width=20%}
 
@@ -16,9 +18,13 @@ I completed my undergraduate study in Businese Management(Pharmaceutical track) 
 
 This website has links to previous projects in the **navbar** above. 
 
-### Contact Information
+### Publication
 
-Weiwei Qi
+[The Role of Neural Flexibility in Cognitive Aging](https://www.biorxiv.org/content/10.1101/2021.04.22.440855v1) @[MHDS](https://www.columbiapsychiatry.org/research/research-areas/mental-health-data-science) + [NYSPI](https://nyspi.org/)
+
+### Contact Information / 联系方式
+
+Weiwei Qi / 齐维为
 
 New York City, New York, 10032  
 

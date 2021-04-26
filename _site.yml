@@ -16,10 +16,10 @@ navbar:
     - text: "Recent"
       href: recent.html
   right:
-    - icon: fa-chart-bar fa-lg
+    - text: "Projects"
       menu:
-      - text: "A RShiny Project: Map of Drug Abuse"
-        href: https://wq4rstudio.shinyapps.io/shiny_template/
+      - text: "Interactive Map of Drug Abuse"
+        href: shiny_pic.html
       - text: "Prob Matrix Factorization"
         href: https://github.com/wq1701/mlpp_final
       - text: "Natural Lang Proc - Medical Transcript"
