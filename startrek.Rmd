@@ -1,0 +1,45 @@
+---
+title: "Which Star Trek Character Are You?"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Your results:<BR><B>You are <FONT SIZE=6>Mr. Scott</FONT></B>
+<TABLE><TR><TD><TABLE><TR><TD>Mr. Scott</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=60></TD><TD> 60%</TD>
+</TR><TR><TD>Spock</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=59></TD><TD> 59%</TD>
+</TR><TR><TD>Data</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=56></TD><TD> 56%</TD>
+</TR><TR><TD>James T. Kirk (Captain)</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=55></TD><TD> 55%</TD>
+</TR><TR><TD>Uhura</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=55></TD><TD> 55%</TD>
+</TR><TR><TD>Jean-Luc Picard</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=55></TD><TD> 55%</TD>
+</TR><TR><TD>Geordi LaForge</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=55></TD><TD> 55%</TD>
+</TR><TR><TD>Will Riker</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=55></TD><TD> 55%</TD>
+</TR><TR><TD>Leonard McCoy (Bones)</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=50></TD><TD> 50%</TD>
+</TR><TR><TD>Chekov</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=50></TD><TD> 50%</TD>
+</TR><TR><TD>Beverly Crusher</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=50></TD><TD> 50%</TD>
+</TR><TR><TD>Worf</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=50></TD><TD> 50%</TD>
+</TR><TR><TD>Deanna Troi</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=40></TD><TD> 40%</TD>
+</TR><TR><TD>An Expendable Character (Redshirt)</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=25></TD><TD> 25%</TD>
+</TR><TR><TD>Mr. Sulu</TD>
+<TD><HR ALIGN=LEFT NOSHADE SIZE=4 WIDTH=20></TD><TD> 20%</TD>
+</TR></TABLE></TD>
+<TD>You are a fun-loving foreigner with an amazing ability to get any job done on time. Often described as a "Miracle Worker". 
+<IMG SRC="http://www.seabreezecomputers.com/startrek/pics/new/scotty.jpg"></TD>
+</TR></TABLE><A HREF="http://www.seabreezecomputers.com/startrek">
+Click here to take the Star Trek Personality Quiz</A><BR>

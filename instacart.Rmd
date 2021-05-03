@@ -1,0 +1,186 @@
+---
+title: "Instacart insight"
+author: "Weiwei Qi"
+output: 
+  html_document: 
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = F)
+library(tidyverse)
+library(p8105.datasets)
+
+library(plotly)
+
+data('instacart')
+```
+
+```{r}
+most_aisle_orders = instacart %>%
+  group_by(aisle) %>% 
+  summarise(n = n()) %>% 
+  left_join(., instacart %>% select(aisle, department) %>% unique(), by = "aisle")
+  
+top_1_aisle = most_aisle_orders %>%
+  top_n(1, n)
+```
+
+- There are `r nrow(most_aisle_orders)` aisles, and the most items are ordered from the `fresh vegetables` aisle, in which `r top_1_aisle %>% pull(n)` items were ordered. The top 3 aisles are `fresh vegetables`, `fresh fruits`, and `packaged vegetables fruits`. The three lest orders aisles are `beauty`, `frozen juice`, and `baby accessories`. 
+
+```{r plot of aisle orders part 2}
+each_aisle_order = most_aisle_orders %>% 
+  filter(n > 10000)
+
+# reorder() the scatter plot in descending order. 
+each_aisle_order %>%  
+  ggplot(aes(x = reorder(aisle, -n), y = n, na.rm = T)) +
+  geom_col(aes(fill = department), color = "black", position = "dodge") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8), 
+        axis.text.y = element_text(size = 10)) +
+  labs(x = "aisle", y = "order numbers", title = "Most popular aisles") +
+  scale_y_continuous(breaks = seq(0, 160000, by = 10000))
+```
+
+There are total `r nrow(each_aisle_order)` aisles with more than 10000 items ordered. In them, `fresh vegetables`, `fresh fruits`, and `packaged vegetables fruits` are the top 3 aisles. The median of the orders is `r median(pull(each_aisle_order, n))`, the mean of the order is `r round(mean(pull(each_aisle_order, n)), digits = 0)`. 
+
+```{r the three most popular in the very three aisles part 3}
+(joint_table = instacart %>% 
+  filter(aisle %in% c("dog food care", "baking ingredients", "packaged vegetables fruits")) %>% 
+  group_by(aisle, product_name) %>% 
+  summarise(order_times = n()) %>% 
+  group_by(aisle) %>% 
+  arrange((desc(order_times))) %>% 
+  top_n(3, order_times) %>% 
+  knitr::kable())
+```
+
+The top 3 popular item in aisle `packaged vegetabkles fruits` are all organic products: `Organic Baby Spinach`, `Organic Raspberries`, `Organic Blueberries`. It is noticeable that the No.3 popular product in `packaged vegetabkles fruits` is ordered almost ten times as much as the top 1 popular product in the `baking ingredients` aisle, same goes for `baking ingredients` and `dog food care`. 
+
+```{r part 4}
+(apple_coffee = instacart %>% 
+  filter(product_name %in% c("Pink Lady Apples", "Coffee Ice Cream")) %>% 
+  group_by(product_name, order_dow) %>%
+  summarise(mean_hr = mean(order_hour_of_day)) %>% 
+  mutate(order_dow = recode(order_dow, `0` = "Sun.", `1` = "Mon.", `2` = "Tues.", `3` = "Wed.", `4` = "Thur.", `5` = "Fri.", `6` = "Sat.")) %>% 
+  pivot_wider(
+    names_from = order_dow, 
+    values_from = mean_hr
+  ) %>% 
+  knitr::kable())
+```
+
+Mean order time of  the `Coffee Ice Cream` across week is about 13:00 to 15:00. It may imply that people have the tendency to buy coffe related item after lunch time. Most mean order time of the `Pink Lady Apples` is about 11:00 to 12:00 o'clock of the  day. On Wednesday however, the mean order time is about 2 hrs late than the other 6 days. 
+
+- The original data has `r nrow(instacart)` observations and `r ncol(instacart)` variables. 
+- Main key variables include `product_name`, `aisle`. The two variables is mostly used in exploring the popularity of a product and the aisle it belongs to. 
+- The observation gives identical information about each order, including who bought what, from which category(aisle). Each row of observation might have some categories the same, but it is impossible to be identical in every category. Each row of observation is unique on the whole categorical level. For example, the first row of observation of the dataset means that a customer(user id: 112108) bought the Bulgarian Yogurt(product id: 49302) from the yogurt aisle(aisle id: 120), which belongs to the daily eggs department. This order is his 4th order, and he had bought this product before(reordered == 1). It has been 9 days since the last time he bought the same yogurt. 
+
+# Order pattern
+
+## When - in a day?
+
+```{r}
+bar_plot_hod = instacart %>% 
+  group_by(order_hour_of_day) %>% 
+  ggplot(aes(x = order_hour_of_day, fill = department)) + 
+  geom_bar() + 
+  theme_classic() + 
+  xlab("hour of day") + ylab("orders")
+
+ggplotly(bar_plot_hod)
+```
+
+## Which day? 
+
+```{r}
+bar_plot_dow = instacart %>% 
+  group_by(order_dow) %>% 
+  ggplot(aes(x = order_dow, fill = department)) + 
+  geom_bar() + 
+  theme_classic() + 
+  xlab("day of week") + ylab("orders")
+
+ggplotly(bar_plot_dow)
+```
+
+## how many order do people usually take? 
+
+```{r}
+# instacart %>% select(order_number) %>% 
+#   ggplot() + geom_histogram(aes(x = order_number))
+# 
+# instacart %>% 
+#   select(user_id, order_number) %>% unique() %>% 
+#   count(order_number)
+# 
+# instacart %>% count(order_number)
+
+instacart %>% 
+  select(user_id, order_number) %>% unique() %>% 
+  count(order_number) %>% 
+  plot_ly(x = ~order_number, y = ~n, color = ~order_number, 
+          type = "bar", colors = "viridis")
+```
+
+# Reorder
+
+## How often? 
+
+```{r}
+bar_plot_reord = instacart %>% 
+  group_by(days_since_prior_order) %>% 
+  ggplot(aes(x = days_since_prior_order, fill = department)) + 
+  geom_bar() + 
+  theme_classic() + 
+  xlab("day of week") + ylab("orders")
+
+ggplotly(bar_plot_reord)
+```
+
+## Basket size
+
+```{r}
+basket1 = instacart %>% group_by(order_id) %>% 
+  summarize(basket_size = n(), 
+            reord_items = sum(reordered)) 
+
+basket2 = basket1 %>% 
+  group_by(basket_size) %>% 
+  summarize(n = n(), avg_reord_items = mean(reord_items)) %>% 
+  mutate(avg_reord_perc = avg_reord_items / basket_size, 
+         avg_reord_perc_round = round(avg_reord_items / basket_size, 3)) %>% 
+  arrange(basket_size) %>% 
+  mutate(basket_size = as.factor(basket_size), 
+         avg_reord_perc = as.factor(avg_reord_perc), 
+         avg_reord_perc_round = as.factor(avg_reord_perc_round))
+# avg_reord_perc has to be factor level so it wont cause error in ggplotly
+
+basket2_fig = basket2 %>% 
+  ggplot(aes(x = basket_size, y = n)) + 
+  geom_col(aes(fill = avg_reord_perc_round)) + 
+  labs(y = 'Order Count', 
+       x = 'Number of Items in Basket', 
+       title = 'Basket Size Distribution') +
+  theme(axis.text.x = element_text(size = 6.0, angle = 90,
+                                   hjust = 1, vjust = 0.5))
+
+ggplotly(basket2_fig)
+```
+
+- the distribution is right-skewed
+  
+  - the range of basket size is between 1-80 items
+
+  - most people order only 4-8 items at once
+
+- most people have a reorder frequency lower than 0.6
+
+- intriguing how people with either small basket (<4 items ) or fairly large basket (>=20 items) have higher reorder frequency
+
+
+
+
+
