@@ -35,13 +35,15 @@ each_aisle_order = most_aisle_orders %>%
   filter(n > 10000)
 
 # reorder() the scatter plot in descending order. 
-each_aisle_order %>%  
+aisle_fig = each_aisle_order %>%  
   ggplot(aes(x = reorder(aisle, -n), y = n, na.rm = T)) +
   geom_col(aes(fill = department), color = "black", position = "dodge") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8), 
         axis.text.y = element_text(size = 10)) +
   labs(x = "aisle", y = "order numbers", title = "Most popular aisles") +
   scale_y_continuous(breaks = seq(0, 160000, by = 10000))
+
+ggplotly(aisle_fig)
 ```
 
 There are total `r nrow(each_aisle_order)` aisles with more than 10000 items ordered. In them, `fresh vegetables`, `fresh fruits`, and `packaged vegetables fruits` are the top 3 aisles. The median of the orders is `r median(pull(each_aisle_order, n))`, the mean of the order is `r round(mean(pull(each_aisle_order, n)), digits = 0)`. 
@@ -106,7 +108,7 @@ bar_plot_dow = instacart %>%
 ggplotly(bar_plot_dow)
 ```
 
-## how many order do people usually take? 
+## How many orders do people usually take? 
 
 ```{r}
 # instacart %>% select(order_number) %>% 
@@ -125,7 +127,7 @@ instacart %>%
           type = "bar", colors = "viridis")
 ```
 
-# Reorder
+# Reorder pattern
 
 ## How often? 
 
@@ -139,6 +141,8 @@ bar_plot_reord = instacart %>%
 
 ggplotly(bar_plot_reord)
 ```
+
+- Most people reordered every 7 or 30 days
 
 ## Basket size
 
@@ -170,17 +174,50 @@ basket2_fig = basket2 %>%
 ggplotly(basket2_fig)
 ```
 
-- the distribution is right-skewed
+- The distribution is right-skewed
   
   - the range of basket size is between 1-80 items
 
   - most people order only 4-8 items at once
 
-- most people have a reorder frequency lower than 0.6
+- Most people have a reorder frequency lower than 0.6
 
-- intriguing how people with either small basket (<4 items ) or fairly large basket (>=20 items) have higher reorder frequency
+- Intriguing how people with either small basket (<4 items ) or fairly large basket (>=20 items) have higher reorder frequency
 
+## Reorder ratio
 
+```{r}
+temp1 = instacart %>% filter(order_number > 1) %>% 
+  # exclude first order, which will never have reordered
+  count(reordered) %>% mutate(ratio = n/sum(n)) %>% 
+  mutate(reordered = as.factor(reordered))
 
+temp1 %>% ggplot(aes(x = "", y = ratio, fill = reordered)) + 
+  geom_col(width = 1) + labs(y = "Product Reordered Ratio") + 
+  coord_polar(theta = 'y', start = 0) + scale_fill_brewer(palette = 2) +
+  theme(axis.title.y = element_blank())
+```
 
+```{r}
+tmp2 <- instacart %>% count(product_id) %>% # filter only top 10 products for reorder analysis 
+  top_n(n = 30) %>% left_join(instacart) %>% # now find out their reordered rate 
+  group_by(product_id, product_name) %>% 
+  summarize(reordered_rate = sum(reordered, na.rm = TRUE)/n()) %>% 
+  left_join(instacart %>% select(product_id, department), by = "product_id") %>% 
+  unique() %>% 
+  arrange(desc(reordered_rate))
+
+p2 <- tmp2 %>% ggplot(aes(x = reorder(product_name, reordered_rate), 
+                          y = reordered_rate, fill = department)) + 
+  labs(title = 'Top 30 Products Sold and Their Reordering Rate') + 
+  geom_col() + scale_y_continuous(limits = c(0, 1), 
+                                  breaks = seq(0, 1, by = 0.1)) + 
+  coord_flip()
+
+ggplotly(p2)
+
+# Q: can we make a prompt so that we can choose top n by input?
+```
+
+- No doubt people enjoy fruits
 
