@@ -9,14 +9,14 @@ navbar:
       menu:
       - text: "ENG"
         href: weiweiqi-EN.pdf
-      - text: "简体中文"
+      - text: "CN"
         href: weiweiqi-CN.pdf
-      - text: "bilingual"
+      - text: "Bilingual"
         href: weiweiqi-CNEN.pdf
     - text: "Recent"
       href: recent.html
   right:
-    - text: "Projects"
+    - text: "@CU"
       menu:
       - text: "Interactive Map of Drug Abuse"
         href: shiny_pic.html
@@ -29,7 +29,7 @@ navbar:
     - text: "DS Club"
       href: https://sites.google.com/view/cumcdatasciencegroup/home
     - icon: fa-envelope fa-lg
-      href: mailto:wq2151@cumc.columbia.edu
+      href: mailto:wq2151@caa.columbia.edu
     - icon: fa-hand-spock
       href: startrek.html
     - icon: fa-github fa-lg

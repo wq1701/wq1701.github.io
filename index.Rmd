@@ -14,22 +14,18 @@ Bachelor of Business Management (2015-2019) - China Pharmaceutial University
 
 ### About
 
-I completed my undergraduate study in Businese Management(Pharmaceutical track) at [China Pharmaceutical University](https://en.cpu.edu.cn/) in 2019. Now I am a MS student in Biostatistics(Theory and Methods track) at [Columbia University](https://www.mailman.columbia.edu/become-student/departments/biostatistics). I am interested in data science and programming in R and python. I love playing with codes and use what I know for some goofy funny stuff. 
+I completed my undergraduate study in Businese Management(Pharmaceutical track) at [China Pharmaceutical University](https://en.cpu.edu.cn/) in 2019. Then I received a MS in Biostatistics(Theory and Methods track) from [Columbia University](https://www.mailman.columbia.edu/become-student/departments/biostatistics), during which time I joined LeeLab and a [paper](https://www.sciencedirect.com/science/article/pii/S1053811921010569) was published. 
 
-This website has links to previous projects in the **navbar** above. 
+I joined [IQVIA](https://www.iqvia.com/) (Data Science & Advanced Analytics) in 2021. Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/weiwei-qi-539677164/).
 
 ### Publication
 
-[The Role of Neural Flexibility in Cognitive Aging](https://www.biorxiv.org/content/10.1101/2021.04.22.440855v1) @[MHDS](https://www.columbiapsychiatry.org/research/research-areas/mental-health-data-science) + [NYSPI](https://nyspi.org/)
+[The Role of Neural Flexibility in Cognitive Aging](https://www.sciencedirect.com/science/article/pii/S1053811921010569) @[MHDS](https://www.columbiapsychiatry.org/research/research-areas/mental-health-data-science) + [NYSPI](https://nyspi.org/)
 
-### Contact Information / 联系方式
+### Contact Information
 
-Weiwei Qi / 齐维为
+Weiwei Qi
 
 New York City, New York, 10032  
 
-Email: [wq2151@columbia.edu](mailto:wq2151@columbia.edu); [wwqi4real@163.com](mailto:wwqi4real@163.com)
-
-Phone: (+1) 646-683-6801 (US); (+86) 159-5107-0153 (China)
-
-
+Email: [wq2151@caa.columbia.edu](mailto:wq2151@caa.columbia.edu); [wwqi4real@163.com](mailto:wwqi4real@163.com)
