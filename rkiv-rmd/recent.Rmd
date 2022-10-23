@@ -3,6 +3,18 @@ title: "Columbia updates"
 output: html_document
 ---
 
+![](./image/diploma_columbia-page-001.jpg){width=100%}
+
+
+
+<center> 
+**Officially Graduated!!!** [parchment here](https://www.parchment.com/u/s/iK4A)
+</center>
+
+# Spring 2021
+
+Practicum
+
 # Fall 2020
 
 ### Course
