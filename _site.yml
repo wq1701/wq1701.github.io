@@ -30,8 +30,8 @@ navbar:
         href: https://github.com/armoses/Columbia_NLP_EHR_Project
       - text: "Instacart Insight"
         href: instacart.html
-    - text: "DS Club"
-      href: https://sites.google.com/view/cumcdatasciencegroup/home
+      - text: "CUIMC DS Club"
+        href: https://sites.google.com/view/cumcdatasciencegroup/home
     - icon: fa-envelope fa-lg
       href: mailto:wq2151@caa.columbia.edu
     - icon: fa-hand-spock
