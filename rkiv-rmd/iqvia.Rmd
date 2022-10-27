@@ -1,0 +1,17 @@
+---
+title: "Columbia updates"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+- ROI studies for clients' advertising campaigns on the US market; Converting statistical analysis into viable and actionable business insights
+
+- SOM (Suspicious Order Monitoring); Developing, tuning, validating, and deploying Machine Learning classification models on US purchase behavior data
+
+- Designed, coded, and deployed an internal automation system for analysis; estimated to have saved over 300 hours in 6 month
+![](./image/dmci_awards.png){width=100%}
+
+- Profiling, Segmentation, and Targeting for sales force effectiveness

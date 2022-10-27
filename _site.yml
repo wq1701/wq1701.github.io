@@ -14,7 +14,11 @@ navbar:
       - text: "Bilingual"
         href: weiweiqi-CNEN.pdf
     - text: "Recent"
-      href: recent.html
+      menu:
+      - text: Columbia
+        href: recent.html
+      - text: IQVIA
+        href: iqvia.html
   right:
     - text: "@CU"
       menu:

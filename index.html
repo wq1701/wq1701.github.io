@@ -13,8 +13,7 @@
 
 <title>Weiwei Qi</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -265,8 +264,20 @@ $(document).ready(function () {
     </li>
   </ul>
 </li>
-<li>
-  <a href="recent.html">Recent</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Recent
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="recent.html">Columbia</a>
+    </li>
+    <li>
+      <a href="iqvia.html">IQVIA</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -340,8 +351,8 @@ $(document).ready(function () {
 
 <p>Data Science &amp; Advanced Analytics (2021-) - IQVIA</p>
 <p>Master of Science in Biostatistics (2019-2021) - Columbia University Mailman School of Public Health</p>
-<p>Bachelor of Business Management (2015-2019) - China Pharmaceutial University</p>
-<p><img src="image/front.jpg" style="width:20.0%" /></p>
+<p>Bachelor of Business Management (2015-2019) - China Pharmaceutical University</p>
+<!-- ![](./image/front.jpg){width=20%} -->
 <center>
 <div id="hey-you-find-me" class="section level2">
 <h2>Hey! You find me!</h2>
@@ -353,7 +364,14 @@ $(document).ready(function () {
 </div>
 <div id="publication" class="section level3">
 <h3>Publication</h3>
-<p><a href="https://www.sciencedirect.com/science/article/pii/S1053811921010569">The Role of Neural Flexibility in Cognitive Aging</a> @<a href="https://www.columbiapsychiatry.org/research/research-areas/mental-health-data-science">MHDS</a> + <a href="https://nyspi.org/">NYSPI</a></p>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S1053811921010569">The Role of Neural Flexibility in Cognitive Aging</a> <!-- @[MHDS](https://www.columbiapsychiatry.org/research/research-areas/mental-health-data-science) + [NYSPI](https://nyspi.org/) --></p>
+<pre><code>Varangis, E., Qi, W., Stern, Y., &amp; Lee, S. (2022). The role of neural flexibility in cognitive aging. NeuroImage, 247, 118784.</code></pre>
+<p>Affiliation</p>
+<ul>
+<li>Mental Health Data Science, New York State Psychiatric Institute, 1051 Riverside Drive, Unit 48, New York, NY 10032, USA</li>
+<li>Department of Biostatistics, Columbia University, New York, NY 10032, USA</li>
+<li>Research Foundation for Mental Hygiene (RFMH)</li>
+</ul>
 </div>
 <div id="contact-information" class="section level3">
 <h3>Contact Information</h3>
@@ -367,11 +385,6 @@ $(document).ready(function () {
 <footer>
     <p align="center">Copyright &copy; 2021, Weiwei Qi, All rights reserved.</p>
 </footer>
-
-
-
-
-
 
 
 
