@@ -13,6 +13,8 @@ navbar:
         href: weiweiqi-CN.pdf
       - text: "Bilingual"
         href: weiweiqi-CNEN.pdf
+    - text: "Stacks"
+      href: stacks.html
     - text: "Recent"
       menu:
       - text: Columbia

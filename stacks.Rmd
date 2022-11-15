@@ -1,0 +1,28 @@
+---
+title: "Stacks"
+output: 
+  html_document: 
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Enhanced experience with R in
+
+- Data wrangling
+- Data visualization
+- Statistical programming
+  
+### Rich experience with Python in
+
+- ML model exploration, implementation, and evaluation
+- Automation programs
+
+### Experienced Public Speaker
+
+- Knowledge sharing
+  
+### Business Insights to Data Science

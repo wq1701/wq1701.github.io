@@ -11,7 +11,7 @@
 
 
 
-<title>About</title>
+<title>Stacks</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -221,6 +224,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -228,6 +294,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -348,16 +424,35 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">About</h1>
+<h1 class="title toc-ignore">Stacks</h1>
 
 </div>
 
 
-<p>I spent 4 years in business school at China Pharmaceutical University, where I was trained to think critically and utilize quantitative skills in real world problems. Economics and operation research course experience had give me the capability to think and tackle problems quantitively and logially. In course statistics principles, I was able to find the beauty of programming, which inspired me into getting a master’s degree where I can learn both statistical methods and programming skills.</p>
-<p>Then I started pursuing my master’s degree in Biostatistics at Columbia University. I am interested in machine learning techniques and coding in solving real-world problems.</p>
-<p>After graduating from Columbia, I joined IQVIA in 2021 as an analyst in Data Science and Advanced Analytics.</p>
-<p><strong>This website is built with R and RStudio; intended for personal usage only. </strong></p>
-<p><strong>by Weiwei Qi, 2019</strong></p>
+<div id="enhanced-experience-with-r-in" class="section level3">
+<h3>Enhanced experience with R in</h3>
+<ul>
+<li>Data wrangling</li>
+<li>Data visualization</li>
+<li>Statistical programming</li>
+</ul>
+</div>
+<div id="rich-experience-with-python-in" class="section level3">
+<h3>Rich experience with Python in</h3>
+<ul>
+<li>ML model exploration, implementation, and evaluation</li>
+<li>Automation programs</li>
+</ul>
+</div>
+<div id="experienced-public-speaker" class="section level3">
+<h3>Experienced Public Speaker</h3>
+<ul>
+<li>Knowledge sharing</li>
+</ul>
+</div>
+<div id="business-insights-to-data-science" class="section level3">
+<h3>Business Insights to Data Science</h3>
+</div>
 
 <br><br>
 <footer>
@@ -370,6 +465,8 @@ $(document).ready(function () {
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -402,6 +499,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
