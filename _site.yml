@@ -14,7 +14,7 @@ navbar:
       - text: "Bilingual"
         href: weiweiqi-CNEN.pdf
     - text: "DS-Pub"
-      href: https://wq1701.github.io/dspub/r_wrangling/cheatsheet.html
+      href: https://wq1701.github.io/dspub/
     - text: "Recent"
       menu:
       - text: Columbia
