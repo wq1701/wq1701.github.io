@@ -19,8 +19,6 @@ navbar:
       menu:
       - text: Columbia
         href: recent.html
-      - text: IQVIA
-        href: iqvia.html
   right:
     - text: "@CU"
       menu:

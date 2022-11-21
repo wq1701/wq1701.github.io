@@ -49,7 +49,7 @@ Practicum
 
 - P8109 - Statistical Inference
 
-### Volunteer
+### Work
 
 - R developer @ [U.S.-China Health Summit](https://www.uschinahealthsummit.org/)
 

@@ -13,7 +13,7 @@
 
 <title>Weiwei Qi</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -59,6 +59,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -140,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -173,8 +181,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -182,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -235,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -248,7 +249,7 @@ $(document).ready(function () {
   <a href="about.html">About</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     CV
      
     <span class="caret"></span>
@@ -269,7 +270,7 @@ $(document).ready(function () {
   <a href="https://wq1701.github.io/dspub/">DS-Pub</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Recent
      
     <span class="caret"></span>
@@ -278,15 +279,12 @@ $(document).ready(function () {
     <li>
       <a href="recent.html">Columbia</a>
     </li>
-    <li>
-      <a href="iqvia.html">IQVIA</a>
-    </li>
   </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     @CU
      
     <span class="caret"></span>
@@ -354,26 +352,46 @@ $(document).ready(function () {
 
 
 <p>Data Science &amp; Advanced Analytics (2021-) - IQVIA</p>
-<p>Master of Science in Biostatistics (2019-2021) - Columbia University Mailman School of Public Health</p>
-<p>Bachelor of Business Management (2015-2019) - China Pharmaceutical University</p>
+<p>Master of Science in Biostatistics (2019-2021) - Columbia University
+Mailman School of Public Health</p>
+<p>Bachelor of Business Management (2015-2019) - China Pharmaceutical
+University</p>
 <!-- ![](./image/front.jpg){width=20%} -->
 <center>
-<p><img src="image/IMG_20201217_114705_resize1080.jpg" style="width:80.0%" /></p>
-<p><a href="https://www.ironicsans.com/2006/04/animated_manhattan_tom_jerry_m.html"><strong>Where is Jerry?</strong></a></p>
+<p><img src="image/IMG_20201217_114705_resize1080.jpg"
+style="width:80.0%" /></p>
+<p><a
+href="https://www.ironicsans.com/2006/04/animated_manhattan_tom_jerry_m.html"><strong>Where
+is Jerry?</strong></a></p>
 </center>
 <div id="about" class="section level3">
 <h3>About</h3>
-<p>I completed my undergraduate study in Businese Management(Pharmaceutical track) at <a href="https://en.cpu.edu.cn/">China Pharmaceutical University</a> in 2019. Then I received a MS in Biostatistics(Theory and Methods track) from <a href="https://www.mailman.columbia.edu/become-student/departments/biostatistics">Columbia University</a>, during which time I joined LeeLab and a <a href="https://www.sciencedirect.com/science/article/pii/S1053811921010569">paper</a> was published.</p>
-<p>I joined <a href="https://www.iqvia.com/">IQVIA</a> (Data Science &amp; Advanced Analytics) in 2021. Feel free to reach out via <a href="https://www.linkedin.com/in/weiwei-qi-539677164/">LinkedIn</a>.</p>
+<p>I completed my undergraduate study in Businese
+Management(Pharmaceutical track) at <a
+href="https://en.cpu.edu.cn/">China Pharmaceutical University</a> in
+2019. Then I received a MS in Biostatistics(Theory and Methods track)
+from <a
+href="https://www.mailman.columbia.edu/become-student/departments/biostatistics">Columbia
+University</a>, during which time I joined LeeLab and a <a
+href="https://www.sciencedirect.com/science/article/pii/S1053811921010569">paper</a>
+was published.</p>
+<p>I joined <a href="https://www.iqvia.com/">IQVIA</a> (Data Science
+&amp; Advanced Analytics) in 2021. Feel free to reach out via <a
+href="https://www.linkedin.com/in/weiwei-qi-539677164/">LinkedIn</a>.</p>
 </div>
 <div id="publication" class="section level3">
 <h3>Publication</h3>
-<p><a href="https://www.sciencedirect.com/science/article/pii/S1053811921010569">The Role of Neural Flexibility in Cognitive Aging</a> <!-- @[MHDS](https://www.columbiapsychiatry.org/research/research-areas/mental-health-data-science) + [NYSPI](https://nyspi.org/) --></p>
+<p><a
+href="https://www.sciencedirect.com/science/article/pii/S1053811921010569">The
+Role of Neural Flexibility in Cognitive Aging</a>
+<!-- @[MHDS](https://www.columbiapsychiatry.org/research/research-areas/mental-health-data-science) + [NYSPI](https://nyspi.org/) --></p>
 <pre><code>Varangis, E., Qi, W., Stern, Y., &amp; Lee, S. (2022). The role of neural flexibility in cognitive aging. NeuroImage, 247, 118784.</code></pre>
 <p>Affiliation</p>
 <ul>
-<li>Mental Health Data Science, New York State Psychiatric Institute, 1051 Riverside Drive, Unit 48, New York, NY 10032, USA</li>
-<li>Department of Biostatistics, Columbia University, New York, NY 10032, USA</li>
+<li>Mental Health Data Science, New York State Psychiatric Institute,
+1051 Riverside Drive, Unit 48, New York, NY 10032, USA</li>
+<li>Department of Biostatistics, Columbia University, New York, NY
+10032, USA</li>
 <li>Research Foundation for Mental Hygiene (RFMH)</li>
 </ul>
 </div>
@@ -381,7 +399,9 @@ $(document).ready(function () {
 <h3>Contact Information</h3>
 <p>Weiwei Qi</p>
 <p>New York City, New York, 10032</p>
-<p>Email: <a href="mailto:wq2151@caa.columbia.edu">wq2151@caa.columbia.edu</a>; <a href="mailto:wwqi4real@163.com">wwqi4real@163.com</a></p>
+<p>Email: <a
+href="mailto:wq2151@caa.columbia.edu">wq2151@caa.columbia.edu</a>; <a
+href="mailto:wwqi4real@163.com">wwqi4real@163.com</a></p>
 </div>
 
 <br><br>
