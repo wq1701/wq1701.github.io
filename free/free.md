@@ -25,6 +25,8 @@
 
 [SAI #03: Machine Learning Deployment](https://swirlai.substack.com/p/sai-03-machine-learning-deployment)
 
+[Python® Notes for Professionals book](https://goalkicker.com/PythonBook/)
+
 ## cheatsheets
 
 https://sites.google.com/view/datascience-cheat-sheets
