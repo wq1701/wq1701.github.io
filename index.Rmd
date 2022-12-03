@@ -12,9 +12,13 @@ Bachelor of Business Management (2015-2019) - China Pharmaceutical University
 
 <center>
 
-![](./image/IMG_20201217_114705_resize1080.jpg){width=80%}
+<!-- ![](./image/IMG_20201217_114705_resize1080.jpg){width=80%} -->
 
-[**Where is Jerry?**](https://www.ironicsans.com/2006/04/animated_manhattan_tom_jerry_m.html)
+<!-- [**Where is Jerry?**](https://www.ironicsans.com/2006/04/animated_manhattan_tom_jerry_m.html) -->
+
+<a href="url"><img src="./image/44922446.jpeg" height="auto" width="200" style="border-radius:50%"></a>
+
+**"NETS in 7" - some random guys on the subway**
 
 </center>
 
