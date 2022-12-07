@@ -13,7 +13,7 @@ navbar:
         href: weiweiqi-CN.pdf
       - text: "Bilingual"
         href: weiweiqi-CNEN.pdf
-    - text: "DS-Pub"
+    - text: "dspub"
       href: https://wq1701.github.io/dspub/
     - text: "Recent"
       menu:
