@@ -18,17 +18,17 @@ Bachelor of Business Management (2015-2019) - China Pharmaceutical University
 
 <a href="url"><img src="./image/44922446.jpeg" height="auto" width="200" style="border-radius:50%"></a>
 
-**"NETS in 7" - some random guys on the subway**
+**Without talent you are nothing. Without attitude you will stay a talent forever.**
 
 </center>
 
-### About
+## ABOUT
 
 I completed my undergraduate study in Businese Management(Pharmaceutical track) at [China Pharmaceutical University](https://en.cpu.edu.cn/) in 2019. Then I received a MS in Biostatistics(Theory and Methods track) from [Columbia University](https://www.mailman.columbia.edu/become-student/departments/biostatistics), during which time I joined LeeLab and a [paper](https://www.sciencedirect.com/science/article/pii/S1053811921010569) was published. 
 
 I joined [IQVIA](https://www.iqvia.com/) (Data Science & Advanced Analytics) in 2021. Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/weiwei-qi-539677164/).
 
-### Publication
+## PUBLICATION
 
 [The Role of Neural Flexibility in Cognitive Aging](https://www.sciencedirect.com/science/article/pii/S1053811921010569)
 <!-- @[MHDS](https://www.columbiapsychiatry.org/research/research-areas/mental-health-data-science) + [NYSPI](https://nyspi.org/) -->
@@ -37,16 +37,12 @@ I joined [IQVIA](https://www.iqvia.com/) (Data Science & Advanced Analytics) in 
 Varangis, E., Qi, W., Stern, Y., & Lee, S. (2022). The role of neural flexibility in cognitive aging. NeuroImage, 247, 118784.
 ```
 
-Affiliation
+**Affiliation**
 
   - Mental Health Data Science, New York State Psychiatric Institute, 1051 Riverside Drive, Unit 48, New York, NY 10032, USA
   - Department of Biostatistics, Columbia University, New York, NY 10032, USA
   - Research Foundation for Mental Hygiene (RFMH)
 
-### Contact Information
-
-Weiwei Qi
-
-New York City, New York, 10032  
+## CONTACT
 
 Email: [wq2151@caa.columbia.edu](mailto:wq2151@caa.columbia.edu); [wwqi4real@163.com](mailto:wwqi4real@163.com)
