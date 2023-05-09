@@ -47,5 +47,6 @@ output:
   html_document:
     theme: flatly
     include:
+      in_header: header.html
       after_body: footer.html
     css: styles.css
